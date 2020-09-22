@@ -58,6 +58,9 @@ const checkStatus = function(response, message = '') {
 const checkOCSStatus = async function(response, message = '') {
   const statusCode = _.get(response, 'ocs.meta.statuscode')
   const ocsMessage = _.get(response, 'ocs.meta.message')
+  console.log(response)
+  console.log(statusCode)
+  console.log(ocsMessage)
   if (statusCode === 200) {
     return response
   } else {
